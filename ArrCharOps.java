@@ -133,7 +133,6 @@ public static int indexOf(char[] arr, char ch) {
         for (int i = 0; i < arr.length; i++) {
             hash += (arr[i])*Math.pow (7,arr.length - 1 - i);
         }       
-        System.out.println(hash);
         return hash;
     }
 
@@ -167,17 +166,10 @@ public static int indexOf(char[] arr, char ch) {
             return -2;
         }
         int length = Math.min(str1.length(), str2.length());
-        System.out.println(" str2: " + str2);
-        System.out.println(" str1: " + str1);
         for (int index = 0; index < length; index++) {
-            System.out.println("Char at str1: " + str1.charAt(index));
-            System.out.println("Char at str2: " + str2.charAt(index));
-            if (str1.charAt(index) < str2.charAt(index) ){
-                System.out.println("return minus 1");
-                return -1;    
+            if (str1.charAt(index) < str2.charAt(index) ){                return -1;    
             }
             if (str2.charAt(index) < str1.charAt(index)){
-                System.out.println("return 1");
                 return 1;
             }
         }   // Replace the following statement with your code
