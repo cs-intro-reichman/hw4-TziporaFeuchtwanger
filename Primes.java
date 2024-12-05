@@ -22,10 +22,17 @@ public class Primes {
             if (isPrime[i] == true) {
                 count ++;   
             }
-            //System.out.println("Index " + i + ": " + isPrime[i]);
+            
         }
         int T = Integer.parseInt(args[0]);
         double average = (double) (count * 100) / T;
+        System.out.println("Prime numbers up to " +T+":");
+        for (int i = 0; i < isPrime.length; i++) {
+            if (isPrime[i] == true ){
+                System.out.println(i);
+            }
+            
+        }
         System.out.println("There are " + count + " primes between 2 and " + T + " (" + (int)average + "% are primes)");
     }
 }
